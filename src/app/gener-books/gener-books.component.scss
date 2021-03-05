@@ -1,0 +1,135 @@
+.container-fluid{
+  margin: 0;
+  padding: 0; 
+  padding-bottom: 20px;
+}
+
+
+.content__header{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+ 
+  
+}
+
+.head__body{
+ width: 100%;
+  max-width: 940px;
+}
+
+.error{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+
+  div{
+    width: 100%;
+  max-width: 940px;
+  }
+}
+
+
+.content__body{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  background-color: #F8F7FF;
+}
+
+.content__center{
+  max-width: 1080px;
+ 
+}
+
+.head__title{
+  cursor: pointer;
+}
+
+.input__icons { 
+  position: relative;
+  width: 100%; 
+  margin-bottom: 10px; 
+
+  .search__icon { 
+    position: absolute; 
+    padding: 10px; 
+    min-width: 38px; 
+  } 
+
+  .cancel__icon { 
+    position:absolute;
+    min-width: 38px; 
+    padding: 10px; 
+    right:5px;
+    cursor: pointer;  
+  } 
+
+  .input__field { 
+    width: 100%; 
+    border-radius : 4px ;
+    padding:  10px 40px; 
+    height : 40px;
+    border: 0;
+    background-color: #F0F0F6;
+
+    &:focus{
+      outline-color: #5E56E7 ;
+     
+    }
+  } 
+
+} 
+
+.my_inifinity__scroll{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.book__card{
+  cursor: pointer;
+
+  .rectangle {
+    width: 100px;
+    height: 142px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px 0 rgba(211, 209, 238, 0.5);
+     margin-left: 8px;
+    // padding-right: 3px;
+  }
+
+  .author{
+    color: #A0A0A0;
+  }
+
+  .title {
+    font-weight: 600;
+    margin-top: 10px;
+  }
+
+  p{
+    font-size: 13px;
+    margin:0 2px;
+    padding-left: 6px;
+    width: 116px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+}
+
+footer {
+  position: fixed;
+  color: #5E56E7;
+
+  text-align: center;
+  bottom: 0;
+  width: 100%;
+
+  strong{
+    background:#F0F0F6;
+  }
+}
+

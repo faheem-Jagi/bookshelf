@@ -1,0 +1,43 @@
+.container-fluid{
+padding-bottom: 20px;
+}
+.content{
+  margin:  auto;
+  max-width: 850px;
+}
+
+.headding{
+  position: relative;
+  background-image: url("/assets/Pattern.svg");
+  height: 250px;
+
+}
+.headding__text{
+  padding-top: 55px;
+  margin: 0 auto;
+  max-width: 780px;
+  font-weight: 600;
+}
+
+.gener__card{
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 20px;
+  padding: 10px 10px;
+  margin-top: 25px;
+  height: 50px;
+  border-radius: 4px;
+  box-shadow: 0 2px 0 rgba(211,209, 238, 0.5);
+  background-color: #F0F0F6;
+}
+
+.gener__card img{
+  height: 25px;
+}
+.gener__card span{
+  margin-left: 15px;
+}
+
+.next{
+  float: right;
+}

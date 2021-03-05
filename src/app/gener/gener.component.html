@@ -1,0 +1,70 @@
+<div class="container-fluid">
+
+  <div class="headding">
+    <div class="headding__text">
+      <h1 class="mt-md-5">Gutenberg Project</h1>
+      <p>
+        A Scocial Catloging website that allow you to freely search its
+        databasse of books, annotatons, and reviews.
+      </p>
+    </div>
+  </div>
+
+  <div class="content">
+    <div class="row">
+      <div class="col-md-6 col-sm-12">
+
+          <div class="gener__card" [routerLink]="['/generBooks', 'Fiction']">
+            <img src="/assets/Fiction.svg" />
+            <span>FICTION</span>
+            <img class="next" src="/assets/Next.svg" />
+          </div>
+
+          <div class="gener__card" [routerLink]="['/generBooks', 'Drama']">
+            <img src="/assets/Drama.svg" />
+            <span>DRAMA</span>
+            <img class="next" src="/assets/Next.svg" />
+          </div>
+
+          <div class="gener__card" [routerLink]="['/generBooks', 'Humour']">
+            <img src="/assets/Humour.svg" />
+            <span>HUMOUR</span>
+            <img class="next" src="/assets/Next.svg" />
+          </div>
+
+          <div class="gener__card" [routerLink]="['/generBooks', 'Politics']">
+            <img src="/assets/Politics.svg" />
+            <span>POLITICS</span>
+            <img class="next" src="/assets/Next.svg" />
+          </div>
+
+
+      </div>
+
+      <div class="col-md-6 col-sm-12">
+ 
+          <div class="gener__card" [routerLink]="['/generBooks', 'Philosophy']">
+            <img src="/assets/Philosophy.svg" />
+            <span>PHILOSOPHY</span>
+            <img class="next" src="/assets/Next.svg" />
+          </div>
+
+
+          <div class="gener__card" [routerLink]="['/generBooks', 'History']">
+            <img src="/assets/History.svg" />
+            <span>History</span>
+            <img class="next" src="/assets/Next.svg" />
+          </div>
+
+
+          <div class="gener__card" [routerLink]="['/generBooks', 'Adventure']">
+            <img src="/assets/Adventure.svg" />
+            <span>ADVENTURE</span>
+            <img class="next" src="/assets/Next.svg" />
+          </div>
+        </div>
+      </div>
+
+  </div>
+
+</div>

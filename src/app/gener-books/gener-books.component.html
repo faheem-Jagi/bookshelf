@@ -1,0 +1,46 @@
+<div class="container-fluid">
+  <div class="content">
+    <div class="content__header p-4">
+      <div class="head__body">
+      <h2 class="head__title" [routerLink]="['/gener']"><img src="/assets/Back.svg" class="px-2" />{{ selectedGener }}</h2>
+      <form #f>
+        <div class="input__icons mr-4">
+          <img class="search__icon" src="/assets/Search.svg" />
+          <input class="input__field" name="search" type="text" [(ngModel)]='searchValue' placeholder="Search"
+            (keyup)="search($event)">
+          <img class="cancel__icon" (click)='clear($event)' src="/assets/Cancel.svg" />
+        </div>
+      </form>
+    </div>
+    </div>
+
+    <div class="error px-4">
+    <div class="alert alert-danger  " *ngIf="errorMsg !== '' ">
+      <strong> {{errorMsg}} </strong>
+    </div>
+  </div>
+
+    <div class="content__body">
+      <div class="content__center">
+      <div class="my_inifinity__scroll" infinite-scroll [infiniteScrollDistance]="3" (scrolled)="onScrollDown()">
+
+        <ng-container *ngFor="let books of bookList ; trackBy: trackByFun">
+          <div class="book__card my-3 mx-md-4"
+            title="{{books.title}} | {{books.authors[0] !== undefined ?  books.authors[0].name : '' }}"
+            (click)="viewBook(books.formats)">
+            <img class="rectangle" [src]="books.formats['image/jpeg']" />
+            <p class="title" [title]='books.title'>{{books.title | uppercase }}</p>
+            <p class="author">{{books.authors[0] !== undefined ? books.authors[0].name : '' }}</p>
+          </div>
+        </ng-container>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <strong  *ngIf="isLoading" class="fixed-bottom">Loading...</strong>
+    <strong  *ngIf="isPageEnd" class="fixed-bottom">Page end reached</strong>
+  </footer>
+</div>
