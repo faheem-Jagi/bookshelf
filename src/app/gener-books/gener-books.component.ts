@@ -81,6 +81,11 @@ export class GenerBooksComponent implements OnInit {
 
             this.generBooksApi !== null? this.isPageEnd = false : this.isPageEnd = true;
 
+          },
+          (error)=>{
+            this.errorMsg = 'Opps, Somthing went wrong';
+            console.log('error', error);
+            this.isLoading = false;
           }));
     } catch (e) {
       this.errorMsg = 'Opps, Somthing went wrong';
