@@ -1,8 +1,10 @@
 # Gutenberg
 
-Run `npm install` to node install packages
-
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.2.0.
+Nodejs and Angular CLI 11.2.0 or greater required
+
+## Installing node packages
+Run `npm install` to install node package from package.json
 
 ## Development server
 
