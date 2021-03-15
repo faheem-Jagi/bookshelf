@@ -9,6 +9,9 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  position: fixed;
+  width: 100%;
+  background-color: white;
  
   
 }
@@ -35,6 +38,7 @@
   flex-wrap: wrap;
   justify-content: center;
   background-color: #F8F7FF;
+  margin-top: 140px;
 }
 
 .content__center{

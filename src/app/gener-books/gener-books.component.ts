@@ -2,7 +2,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Subject } from 'rxjs';
-import { debounceTime, map } from 'rxjs/operators';
+import { debounceTime, distinctUntilChanged, map } from 'rxjs/operators';
 import { GenerBooksService } from '../shared/gener-books.service';
 
 
@@ -49,6 +49,7 @@ export class GenerBooksComponent implements OnInit {
     // search text debounce
     this.searchResults$ = this.subject.pipe(
       debounceTime(1000),
+      distinctUntilChanged(),
       map((searchText: string) => {
         let searchtxt = encodeURIComponent(searchText);
         this.generBooksApi = `${this.api}&search=${searchtxt}&topic=${this.selectedGener}`;
@@ -73,9 +74,6 @@ export class GenerBooksComponent implements OnInit {
             this.generBooksApi = data.next
             this.bookList.push(...data.results);
 
-            // console.log(data);
-            // console.log(this.bookList);
-
             data.count > 0 ? this.errorMsg = '' : this.errorMsg = 'No records found';
             this.isLoading = false;
 
@@ -97,13 +95,13 @@ export class GenerBooksComponent implements OnInit {
   // search function
   search(evt) {
     const searchText = (evt.target.value).trim();
-    if (this.prevSeearchText !== searchText) {
+
       this.prevSeearchText = searchText;
       // emits the `searchText` into the stream. This will cause the operators in its pipe function 
       //(defined in the ngOnInit method) to be run. `debounceTime` runs and then `map`. If the time 
       //interval of 1 sec in debounceTime hasn’t elapsed, map will not be called, thereby saving the server from being called.
       this.subject.next(searchText)
-    }
+    
   }
 
   // Function to clear search and load default data
